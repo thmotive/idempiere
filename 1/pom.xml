@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>1</groupId>
+  
+  <repositories>
+    <repository>
+        <id>com.e-iceblue</id>
+        <name>e-iceblue</name>
+        <url>https://repo.e-iceblue.com/nexus/content/groups/public/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>e-iceblue</groupId>
+        <artifactId>spire.xls</artifactId>
+        <version>13.5.2</version>
+    </dependency>
+</dependencies>
+
+  
+  
+  
+  <artifactId>1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>1</name>
+  <description>1</description>
+</project>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreateRequest</rootPath>
+  <result>
+    <counts>
+      <right></right>
+      <wrong></wrong>
+      <ignores></ignores>
+      <exceptions></exceptions>
+    </counts>
+    <date>2022-10-31T18:31:27+08:00</date>
+    <runTimeInMillis>$result.runTimeInMillis</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RequisitionCreatePurchase.LoginClient"&gt;LoginClient&lt;/a&gt; &lt;a href="RequisitionCreatePurchase.LoginClient?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System123&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</content>
+    <relativePageName>CreateRequest</relativePageName>
+  </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>8259</totalRunTimeInMillis>
+</testResults>
+

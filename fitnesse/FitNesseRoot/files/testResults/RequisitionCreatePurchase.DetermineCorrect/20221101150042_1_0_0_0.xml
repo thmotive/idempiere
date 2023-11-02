@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.DetermineCorrect</rootPath>
+  <result>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-01T15:00:42+08:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System123&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DetermineCorrect</relativePageName>
+  </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1</totalRunTimeInMillis>
+</testResults>
+

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>IdempiereSuite.TestLoginGardenAdmin</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2022-11-03T12:39:14+07:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="fail"&gt;*Login*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.Exception: Error logging in - user/password combination not valid
+	at org.idempiere.fitnesse.fixture.Login.doStaticTable(Login.java:138)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestLoginGardenAdmin</relativePageName>
+  </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1</totalRunTimeInMillis>
+</testResults>
+

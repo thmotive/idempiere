@@ -1,0 +1,65 @@
+Complete the Requisition
+
+!include -c LoginClient
+
+!|Set DocAction|
+|*Table* |M_Requisition               |
+|M_Requisition_id|@M_Requisition.M_Requisition_id@|
+|DocAction   |CO                      |
+|*Save*  |         |
+
+!|Run Process|
+|*ProcessValue*|M_Requisition_POCreate    |
+|*RecordID*    |@M_Requisition.M_Requisition_id@|
+|*DocAction*   |CO                  |
+|M_Product_ID |@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID|
+|ConsolidateDocument   |N                  |
+|*Run*         |   
+
+!|Read Record|
+|*Table*            |C_Order|
+|C_BPartner_ID|@Ref=C_BPartner[Value='0022'].C_BPartner_ID|
+|IsSOTrx|'N'|
+|Description|'Requisition: @M_Requisition.DocumentNo@'|
+|*Read*||
+|C_Order_ID||
+|DocumentNo||
+|TotalLines||
+
+!|Read Record|
+|*Table*            |C_OrderLine|
+|C_Order_ID|@C_Order.C_Order_ID@|  
+|QtyOrdered|2|
+|*Read*||
+|PriceActual||
+| Description | |
+|M_Product_ID||
+
+!|Set DocAction|
+|*Table* |C_Order               |
+|C_Order_ID |@C_Order.C_Order_ID@|
+|DocAction   |CO                      |
+|*Save*  |   
+ 
+!|Read Record|
+|*Table*            |C_OrderLine|
+|C_Order_ID|@C_Order.C_Order_ID@|  
+|QtyOrdered|2|
+|M_Product_ID |@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID|
+|*Read*||
+| Description | |
+|M_Product_ID||
+|QtyEntered||
+|PriceActual||
+
+!|Read Record|
+|*Table*            |C_OrderLine|
+|C_Order_ID|@C_Order.C_Order_ID@|  
+|QtyOrdered|1|
+|M_Product_ID |@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID|
+|*Read*||
+| Description | |
+|M_Product_ID||
+ 
+!|Roll Back|
+|*RollBack*|TRUE|

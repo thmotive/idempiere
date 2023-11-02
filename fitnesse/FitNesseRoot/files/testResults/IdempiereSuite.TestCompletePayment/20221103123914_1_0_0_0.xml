@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>IdempiereSuite.TestCompletePayment</rootPath>
+  <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-03T12:39:14+07:00</date>
+    <runTimeInMillis>57</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="IdempiereSuite.TestLoginGardenAdmin"&gt;TestLoginGardenAdmin&lt;/a&gt; &lt;a href="IdempiereSuite.TestLoginGardenAdmin?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Client[Value='GardenWorld'].AD_Client_ID&lt;hr/&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Role[Name='GardenWorld Admin'].AD_Role_ID&lt;hr/&gt;102&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_BPartnEr&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;NAME&lt;/td&gt;
+		&lt;td&gt;@random_string(Carlos , Ruiz,6)&lt;hr/&gt;Carlos HUXNWT Ruiz&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Value&lt;/td&gt;
+		&lt;td&gt;@random_number(,,8)&lt;hr/&gt;98712505&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_BP_Group_ID&lt;/td&gt;
+		&lt;td&gt;103&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;PotentialLifeTimeValue&lt;/td&gt;
+		&lt;td&gt;@random_number(-,,4,2)&lt;hr/&gt;-6952.69&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;MBPartner[ID=1073987,Value=98712505,Name=Carlos HUXNWT Ruiz,Open=0.0]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Commit*&lt;/td&gt;
+		&lt;td class="pass"&gt;TRUE&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestCompletePayment</relativePageName>
+  </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>57</totalRunTimeInMillis>
+</testResults>
+

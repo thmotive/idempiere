@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>IdempiereSuite.TestCompletePayment</rootPath>
+  <result>
+    <counts>
+      <right>5</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-03T12:41:10+07:00</date>
+    <runTimeInMillis>452</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="IdempiereSuite.TestLoginGardenAdmin"&gt;TestLoginGardenAdmin&lt;/a&gt; &lt;a href="IdempiereSuite.TestLoginGardenAdmin?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Client[Value='GardenWorld'].AD_Client_ID&lt;hr/&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Role[Name='GardenWorld Admin'].AD_Role_ID&lt;hr/&gt;102&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Payment&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Payment_ID&lt;/td&gt;
+		&lt;td&gt;100&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;docAction&lt;/td&gt;
+		&lt;td&gt;VO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="fail"&gt;DocStatus=RE expected VO&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Payment&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_org_id&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;datetrx&lt;/td&gt;
+		&lt;td&gt;2002-02-22 00:00:00.0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;isreceipt&lt;/td&gt;
+		&lt;td&gt;Y&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_doctype_id&lt;/td&gt;
+		&lt;td&gt;119&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bankaccount_id&lt;/td&gt;
+		&lt;td&gt;100&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bpartner_id&lt;/td&gt;
+		&lt;td&gt;112&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_invoice_id&lt;/td&gt;
+		&lt;td&gt;101&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;tendertype&lt;/td&gt;
+		&lt;td&gt;K&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_currency_id&lt;/td&gt;
+		&lt;td&gt;100&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;payamt&lt;/td&gt;
+		&lt;td&gt;98.8&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;discountamt&lt;/td&gt;
+		&lt;td&gt;1.9&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;Testing from fitnesse&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;isprepayment&lt;/td&gt;
+		&lt;td&gt;N&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;MPayment[1000305-400002,Receipt=true,PayAmt=98.8,Discount=1.9,WriteOff=0.0,OverUnder=0.0&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Payment&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Payment_ID&lt;/td&gt;
+		&lt;td&gt;@C_Payment.C_Payment_ID@&lt;hr/&gt;1000305&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;docAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;DocStatus=CO expected CO - IP - WP - WC&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RollBack*&lt;/td&gt;
+		&lt;td class="pass"&gt;TRUE&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestCompletePayment</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fitnesse.client.FitServerServletInvoker</testSystem>
+    <command>java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/nakarat/idem-dev-setup/idempiere/fitnesse/bin:./fitnesse-standalone.jar:./lib/*.jar:./bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet mintsrv 36423 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>5 right, 1 wrong, 0 ignored, 0 exceptions
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>819</totalRunTimeInMillis>
+</testResults>
+

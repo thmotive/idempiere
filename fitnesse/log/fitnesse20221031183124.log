@@ -1,0 +1,20 @@
+127.0.0.1 - - [31/Oct/2022:18:31:24 +0800] "GET /RequisitionCreatePurchase HTTP/1.1" 200 8374
+127.0.0.1 - - [31/Oct/2022:18:31:32 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:31:35 +0800] "GET /RequisitionCreatePurchase?suite HTTP/1.1" 200 11047
+127.0.0.1 - - [31/Oct/2022:18:31:35 +0800] "GET /RequisitionCreatePurchase?responder=stoptest&id=1 HTTP/1.1" 200 1973
+127.0.0.1 - - [31/Oct/2022:18:31:37 +0800] "GET /RequisitionCreatePurchase HTTP/1.1" 200 8374
+127.0.0.1 - - [31/Oct/2022:18:31:38 +0800] "GET /RequisitionCreatePurchase.CreateRequest HTTP/1.1" 200 10724
+127.0.0.1 - - [31/Oct/2022:18:31:44 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:31:52 +0800] "GET /RequisitionCreatePurchase HTTP/1.1" 200 8374
+127.0.0.1 - - [31/Oct/2022:18:31:53 +0800] "GET /RequisitionCreatePurchase.CreatedSave HTTP/1.1" 200 9085
+127.0.0.1 - - [31/Oct/2022:18:31:59 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:32:04 +0800] "GET /RequisitionCreatePurchase.CreatedSave?edit HTTP/1.1" 200 7479
+127.0.0.1 - - [31/Oct/2022:18:32:10 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:32:12 +0800] "GET /RequisitionCreatePurchase HTTP/1.1" 200 8374
+127.0.0.1 - - [31/Oct/2022:18:32:13 +0800] "GET /RequisitionCreatePurchase.CreateRequest HTTP/1.1" 200 10724
+127.0.0.1 - - [31/Oct/2022:18:32:15 +0800] "GET /RequisitionCreatePurchase.CreateRequest?edit HTTP/1.1" 200 7985
+127.0.0.1 - - [31/Oct/2022:18:32:21 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:32:21 +0800] "POST /RequisitionCreatePurchase.CreateRequest HTTP/1.1" 303 0
+127.0.0.1 - - [31/Oct/2022:18:32:21 +0800] "GET /RequisitionCreatePurchase.CreateRequest HTTP/1.1" 200 10843
+127.0.0.1 - - [31/Oct/2022:18:32:30 +0800] "null" 400 1953
+127.0.0.1 - - [31/Oct/2022:18:32:30 +0800] "GET /files/fitnesse/bootstrap/img/minus-sign.png HTTP/1.1" 200 1222

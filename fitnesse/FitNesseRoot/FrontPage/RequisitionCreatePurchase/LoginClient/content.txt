@@ -1,0 +1,6 @@
+!|Login|
+|User        |SuperUser|
+|Password    |System123  |
+|AD_ClIEnT_id|1000000        |
+|AD_Role_id  |1000000        |
+|*Login*     |         |

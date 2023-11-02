@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>IdempiereSuite.TestBug1733602</rootPath>
+  <result>
+    <counts>
+      <right>11</right>
+      <wrong>4</wrong>
+      <ignores>0</ignores>
+      <exceptions>4</exceptions>
+    </counts>
+    <date>2022-11-03T12:39:13+07:00</date>
+    <runTimeInMillis>200</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="IdempiereSuite.TestLoginGardenAdmin"&gt;TestLoginGardenAdmin&lt;/a&gt; &lt;a href="IdempiereSuite.TestLoginGardenAdmin?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;GardenAdmin&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Client[Value='GardenWorld'].AD_Client_ID&lt;hr/&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;@Ref=AD_Role[Name='GardenWorld Admin'].AD_Role_ID&lt;hr/&gt;102&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Check the inventory level before the document&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set Variable&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;@InventoryLevelBefore@&lt;/td&gt;
+		&lt;td&gt;@SQL=SELECT SUM(s.qtyonhand) FROM m_storage s, m_locator l, m_warehouse w WHERE s.m_product_id=133 AND s.m_locator_id = l.m_locator_id AND l.m_warehouse_id=w.m_warehouse_id AND w.m_warehouse_id=103&lt;hr/&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;@ExpectedInventoryLevelAfter@&lt;/td&gt;
+		&lt;td&gt;@SQL=SELECT SUM(s.qtyonhand) -2 FROM m_storage s, m_locator l, m_warehouse w WHERE s.m_product_id=133 AND s.m_locator_id = l.m_locator_id AND l.m_warehouse_id=w.m_warehouse_id AND w.m_warehouse_id=103&lt;hr/&gt;28&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Check the bp balance before the document&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_bpartner&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bpartner_id&lt;/td&gt;
+		&lt;td&gt;@Ref=c_bpartner[Value='SeedFarm'].c_bpartner_id&lt;hr/&gt;120&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MBPartner[ID=120,Value=SeedFarm,Name=Seed Farm Inc.,Open=-2731.5]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;actuallifetimevalue&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;so_creditused&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;totalopenbalance&lt;/td&gt;
+		&lt;td&gt;-2731.5&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Create sales order&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_org_id&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_doctypetarget_id&lt;/td&gt;
+		&lt;td&gt;@Ref=c_doctype[Name='POS Order'].c_doctype_id&lt;hr/&gt;135&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;salesrep_id&lt;/td&gt;
+		&lt;td&gt;101&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;dateordered&lt;/td&gt;
+		&lt;td&gt;2009-03-25 00:00:00.0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bpartner_id&lt;/td&gt;
+		&lt;td&gt;@c_bpartner.c_bpartner_id@&lt;hr/&gt;120&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bpartner_location_id&lt;/td&gt;
+		&lt;td&gt;114&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;paymentrule&lt;/td&gt;
+		&lt;td&gt;B&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_warehouse_id&lt;/td&gt;
+		&lt;td&gt;103&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_pricelist_id&lt;/td&gt;
+		&lt;td&gt;101&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_user_id&lt;/td&gt;
+		&lt;td&gt;105&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrder[1000366-80004,IsSOTrx=true,C_DocType_ID=0, GrandTotal=0.0]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Create sales order line&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_order_id&lt;/td&gt;
+		&lt;td&gt;@C_order.c_Order_id@&lt;hr/&gt;1000366&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_org_id&lt;/td&gt;
+		&lt;td&gt;@C_Order.AD_Org_ID@&lt;hr/&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_product_id&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='PChair'].M_Product_ID&lt;hr/&gt;133&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;qtyentered&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;qtyordered&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrderLine[1000398, Line=10, Ordered=2, Delivered=0.0, Invoiced=0.0, Reserved=0.0, LineNet=67.50]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Complete the sales order&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Run Process&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*ProcessValue*&lt;/td&gt;
+		&lt;td&gt;C_Order Process&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RecordID*&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000366&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*DocAction*&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Run*&lt;/td&gt;
+		&lt;td class="fail"&gt;Terminated&lt;br&gt;Expected CO&lt;br&gt;Received DR&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Assert the order&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Assert Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_order_id&lt;/td&gt;
+		&lt;td&gt;@C_order.c_Order_id@&lt;hr/&gt;1000366&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrder[1000366-80004,IsSOTrx=true,C_DocType_ID=0, GrandTotal=67.50]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;GrandTotal&lt;hr/&gt;67.50&lt;/td&gt;
+		&lt;td class="pass"&gt;67.50&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Check the inventory level after the document&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Assert Variable&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;@ExpectedInventoryLevelAfter@&lt;hr/&gt;28&lt;/td&gt;
+		&lt;td class="fail"&gt;@SQL=SELECT SUM(s.qtyonhand) FROM m_storage s, m_locator l, m_warehouse w WHERE s.m_product_id=133 AND s.m_locator_id = l.m_locator_id AND l.m_warehouse_id=w.m_warehouse_id AND w.m_warehouse_id=103&lt;hr/&gt;30&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;Check the bp balance after the document (with the new cash payment is applied immediately so there must not be variance on the bp balance)&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Assert Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_bpartner&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Where*&lt;/td&gt;
+		&lt;td&gt;c_bpartner_id=120&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MBPartner[ID=120,Value=SeedFarm,Name=Seed Farm Inc.,Open=-2731.5]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;actuallifetimevalue&lt;hr/&gt;0&lt;/td&gt;
+		&lt;td class="fail"&gt;@SQL=SELECT @C_bpartner.actuallifetimevalue@ + @c_order.grandtotal@ FROM DUAL&lt;hr/&gt;67.50&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;so_creditused&lt;hr/&gt;0&lt;/td&gt;
+		&lt;td class="pass"&gt;@SQL=SELECT @C_bpartner.so_creditused@ FROM DUAL&lt;hr/&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;totalopenbalance&lt;hr/&gt;-2731.5&lt;/td&gt;
+		&lt;td class="pass"&gt;@SQL=SELECT @C_bpartner.totalopenbalance@ FROM DUAL&lt;hr/&gt;-2731.5&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Check existance of shipment&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_InOut&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_order_id&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000366&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="fail"&gt;No record found: SELECT * FROM M_InOut WHERE c_order_id=1000366 AND AD_Client_ID=11&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;documentno&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;docstatus&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;issotrx&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_warehouse_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_InOutLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_inout_id&lt;/td&gt;
+		&lt;td&gt;@M_InOut.M_InOut_ID@&lt;hr/&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 45
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;line&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_orderline_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_locator_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_product_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;movementqty&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Check existance of invoice&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Invoice&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_order_id&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000366&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 45
+	... 68 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;documentno&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;issotrx&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;docstatus&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_bpartner_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;totallines&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;grandtotal&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_InvoiceLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Invoice_id&lt;/td&gt;
+		&lt;td&gt;@C_Invoice.C_Invoice_id@&lt;hr/&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 49
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 45
+	... 68 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;line&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;c_orderline_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;m_product_id&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;qtyinvoiced&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;linenetamt&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Check existance of cash payment (now on payment table)&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Payment&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Invoice_id&lt;/td&gt;
+		&lt;td&gt;@C_Invoice.C_Invoice_id@&lt;hr/&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 45
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "AND"
+  Position: 45
+	... 68 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;documentno&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;description&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;processed&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RollBack*&lt;/td&gt;
+		&lt;td class="pass"&gt;TRUE&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestBug1733602</relativePageName>
+  </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>200</totalRunTimeInMillis>
+</testResults>
+

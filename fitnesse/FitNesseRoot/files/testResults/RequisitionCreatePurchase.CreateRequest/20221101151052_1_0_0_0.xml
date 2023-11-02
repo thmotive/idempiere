@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreateRequest</rootPath>
+  <result>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-01T15:10:52+08:00</date>
+    <runTimeInMillis>26</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RequisitionCreatePurchase.LoginClient"&gt;LoginClient&lt;/a&gt; &lt;a href="RequisitionCreatePurchase.LoginClient?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System123&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Create Requisition&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_Requisition&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_org_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ad_user_id&lt;/td&gt;
+		&lt;td&gt;1000697&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Warehouse_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_DocType_ID&lt;/td&gt;
+		&lt;td&gt;1000018&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Description&lt;/td&gt;
+		&lt;td&gt;1 November TEsting&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;MRequisition[1000323-900228,Status=DR,Action=CO]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Create Requisition line&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_RequisitionLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000323&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Org_ID&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.AD_Org_ID@&lt;hr/&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_BPartner_id&lt;/td&gt;
+		&lt;td&gt;@Ref=C_BPartner[Value='0022'].C_BPartner_ID&lt;hr/&gt;1000302&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_id&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Qty&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;X_M_RequisitionLine[1000312]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Create Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_RequisitionLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000323&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Org_ID&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.AD_Org_ID@&lt;hr/&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_BPartner_id&lt;/td&gt;
+		&lt;td&gt;@Ref=C_BPartner[Value='0022'].C_BPartner_ID&lt;hr/&gt;1000302&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_id&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Qty&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;X_M_RequisitionLine[1000313]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>CreateRequest</relativePageName>
+  </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>26</totalRunTimeInMillis>
+</testResults>
+

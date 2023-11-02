@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreatedSave</rootPath>
+  <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-10-31T17:56:17+08:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>&lt;br/&gt;Complete the Requisition&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_Requisition&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000304&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;DocStatus=CO expected CO - IP - WP - WC&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>CreatedSave</relativePageName>
+  </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1</totalRunTimeInMillis>
+</testResults>
+

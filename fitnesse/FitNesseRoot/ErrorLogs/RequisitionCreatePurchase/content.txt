@@ -1,0 +1,14 @@
+!3 !-fit-!
+|'''Date: '''|!-3:15:35 PM (MYT) on Monday, October 31, 2022-!|
+|'''Test Page: '''|.RequisitionCreatePurchase|
+|'''Command: '''|!-java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/fitnesse-standalone.jar:/home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/lib/*.jar:/home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet red1 8089 4-!|
+|'''Exit code: '''|!--1-!|
+|'''Time elapsed: '''|!-1.005 seconds-!|
+----'''Standard Error:'''
+{{{Error: Could not find or load main class fitnesse.client.FitServerServletInvoker
+Caused by: java.lang.ClassNotFoundException: fitnesse.client.FitServerServletInvoker
+}}}----'''Internal Exception:'''
+{{{ java.lang.Exception: FitClient: external process terminated before a connection could be established.
+	fitnesse.components.CommandRunningFitClient$EarlyTerminationRunnable.run(CommandRunningFitClient.java:185)
+	java.base/java.lang.Thread.run(Thread.java:829)
+}}}

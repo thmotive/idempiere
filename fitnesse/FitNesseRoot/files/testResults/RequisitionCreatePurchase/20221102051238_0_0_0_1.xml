@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase</rootPath>
+  <executionLog>
+    <testSystem>fit:fitnesse.client.FitServerServletInvoker</testSystem>
+    <command>java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/bin:./fitnesse-standalone.jar:./lib/*.jar:./bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet red1 35343 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr>Exception in thread "main" java.io.FileNotFoundException: http://localhost:8080/fitnesse/FitServlet?host=red1&amp;port=35343&amp;socketToken=3863
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1920)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at fitnesse.client.ServletInvoker.readResults(ServletInvoker.java:44)
+	at fitnesse.client.ServletInvoker.postUrlRequest(ServletInvoker.java:38)
+	at fitnesse.client.ServletInvoker.run(ServletInvoker.java:23)
+	at fitnesse.client.FitServerServletInvoker.main(FitServerServletInvoker.java:13)
+</stdErr>
+    <exception>FitClient external process terminated before a connection could be established</exception>
+    <exception>FitClient external process terminated before a connection could be established</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1158</totalRunTimeInMillis>
+</suiteResults>
+

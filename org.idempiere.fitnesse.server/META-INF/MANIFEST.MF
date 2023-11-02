@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: iDempiere Fitnesse Server
+Bundle-SymbolicName: org.idempiere.fitnesse.server
+Bundle-Version: 10.0.0.qualifier
+Bundle-Activator: org.idempiere.fitnesse.server.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version>=11))"
+Import-Package: javax.servlet;version="3.0.0",
+ javax.servlet.http;version="3.0.0",
+ org.adempiere.base,
+ org.osgi.framework;version="1.3.0",
+ org.slf4j;version="1.6.1",
+ org.slf4j.helpers;version="1.6.1",
+ org.slf4j.spi;version="1.6.1"
+Bundle-ClassPath: .,
+ lib/fitlibrary.jar,
+ lib/fitlibraryweb.jar,
+ lib/fitnesse.jar,
+ lib/log4j.jar,
+ lib/phantomjsdriver.jar,
+ lib/selenium-server-standalone.jar,
+ lib/fitnesse-standalone.jar
+Web-ContextPath: fitnesse
+Automatic-Module-Name: org.idempiere.fitnesse.server
+Bundle-Vendor: iDempiere Community
+Export-Package: fit,
+ fitnesse.fixtures,
+ fitnesse.slim,
+ org.idempiere.fitnesse.server.fit,
+ org.idempiere.fitnesse.server.slim

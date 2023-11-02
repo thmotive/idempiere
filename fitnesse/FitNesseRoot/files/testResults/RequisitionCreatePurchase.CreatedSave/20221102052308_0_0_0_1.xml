@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreatedSave</rootPath>
+  <result>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>18</exceptions>
+    </counts>
+    <date>2022-11-02T05:23:08+08:00</date>
+    <runTimeInMillis>294</runTimeInMillis>
+    <content>&lt;br/&gt;Complete the Requisition&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RequisitionCreatePurchase.LoginClient"&gt;LoginClient&lt;/a&gt; &lt;a href="RequisitionCreatePurchase.LoginClient?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System123&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_Requisition&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000336&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;DocStatus=CO expected CO - IP - WP - WC&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Run Process&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*ProcessValue*&lt;/td&gt;
+		&lt;td&gt;M_Requisition_POCreate&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RecordID*&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000336&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*DocAction*&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ConsolidateDocument&lt;/td&gt;
+		&lt;td&gt;N&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="pass"&gt;*Run*&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_BPartner_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=C_BPartner[Value='0022'].C_BPartner_ID&lt;hr/&gt;1000302&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;IsSOTrx&lt;/td&gt;
+		&lt;td&gt;'N'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Description&lt;/td&gt;
+		&lt;td&gt;'Requisition: @M_Requisition.DocumentNo@'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrder[1000373-800242,IsSOTrx=false,C_DocType_ID=0, GrandTotal=3210.00]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;1000373&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocumentNo&lt;/td&gt;
+		&lt;td&gt;800242&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000373&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Description&lt;/td&gt;
+		&lt;td&gt;Hello&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: column "hello" does not exist
+  Position: 70
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;QtyOrdered&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000373&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;*Save*&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.Exception: No Record 1000373 in C_Order
+	at org.idempiere.fitnesse.fixture.SetDocAction.doStaticTable(SetDocAction.java:105)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;Read Record&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: column "hello" does not exist
+  Position: 70
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;*Table*&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type starTableStar(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;C_Order_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type c_Order_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;QtyOrdered&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type qtyOrdered(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;M_Product_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type m_Product_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;*Read*&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type starReadStar(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;Description&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type description(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;M_Product_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type m_Product_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;Read Record&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;org.postgresql.util.PSQLException: ERROR: column "hello" does not exist
+  Position: 70
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.compiere.db.StatementProxy.invoke(StatementProxy.java:130)
+	at com.sun.proxy.$Proxy15.executeQuery(Unknown Source)
+	at org.idempiere.fitnesse.fixture.ReadRecord.doStaticTable(ReadRecord.java:115)
+	at fitnesse.fixtures.TableFixture.doRows(TableFixture.java:16)
+	at fit.Fixture.doTable(Fixture.java:160)
+	at fitlibrary.traverse.FitHandler.doTable(FitHandler.java:18)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:110)
+	at fitlibrary.flow.DoFlowOnTable.runTable(DoFlowOnTable.java:56)
+	at fitlibrary.flow.DoFlow.runTable(DoFlow.java:104)
+	at fitlibrary.flow.DoFlow.runSingleTable(DoFlow.java:89)
+	at fitlibrary.flow.DoFlowWithExtraTableAddedWhenNeeded.runStorytest(DoFlowWithExtraTableAddedWhenNeeded.java:33)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:92)
+	at fitlibrary.suite.BatchFitLibrary.doStorytest(BatchFitLibrary.java:50)
+	at fitlibrary.suite.BatchFitLibrary.doTables(BatchFitLibrary.java:107)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:36)
+	at fitlibrary.suite.FitLibraryServer.doTables(FitLibraryServer.java:28)
+	at fit.FitServerBridge.process(FitServerBridge.java:79)
+	at fit.FitServerBridge.run(FitServerBridge.java:60)
+	at org.idempiere.fitnesse.server.fit.FitServerRunner.run(FitServerRunner.java:24)
+	at org.idempiere.fitnesse.server.Runner.execute(Runner.java:23)
+	at org.idempiere.fitnesse.server.fit.FitServlet.runTests(FitServlet.java:30)
+	at org.idempiere.fitnesse.server.fit.FitServlet.service(FitServlet.java:26)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1410)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1630)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1600)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:192)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;*Table*&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type starTableStar(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;C_Order_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type c_Order_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;QtyOrdered&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type qtyOrdered(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;M_Product_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type m_Product_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;*Read*&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type starReadStar(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;Description&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type description(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;M_Product_ID&lt;hr/&gt; &lt;span class="fit_label"&gt;Missing class or Missing method. Possibly:&lt;ul&gt;&lt;li&gt;public Type m_Product_ID(Type1 arg1) { }&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RollBack*&lt;/td&gt;
+		&lt;td class="pass"&gt;TRUE&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>CreatedSave</relativePageName>
+  </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>294</totalRunTimeInMillis>
+</testResults>
+

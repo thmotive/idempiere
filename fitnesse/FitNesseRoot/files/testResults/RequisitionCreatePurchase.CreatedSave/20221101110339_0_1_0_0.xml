@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreatedSave</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-01T11:03:39+08:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>&lt;br/&gt;Complete the Requisition&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_Requisition&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="fail"&gt;not logged in&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Run Process&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*ProcessValue*&lt;/td&gt;
+		&lt;td&gt;M_Requisition_POCreate&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RecordID*&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*DocAction*&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ConsolidateDocument&lt;/td&gt;
+		&lt;td&gt;N&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="fail"&gt;*Run*not logged in&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RollBack*&lt;/td&gt;
+		&lt;td class="fail"&gt;TRUEnot logged in&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>CreatedSave</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fitnesse.client.FitServerServletInvoker</testSystem>
+    <command>java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/bin:./fitnesse-standalone.jar:./lib/*.jar:./bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet red1 41537 3863</command>
+    <exitCode>3</exitCode>
+    <stdOut>0 right, 3 wrong, 0 ignored, 0 exceptions
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>258</totalRunTimeInMillis>
+</testResults>
+

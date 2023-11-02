@@ -1,0 +1,181 @@
+---
+Help: For Reference of Old Red1 Work in WMS.. not usable
+---
+!include -c LogInto
+
+!|Create Record Auto|
+|*Table*  |PM_Contract|
+|||
+|C_BPartner_ID|@Ref=C_BPartner[Name='Seed Farm Inc.'].C_BPartner_ID|
+|M_PriceList_Version_ID|@Ref= M_PriceList_Version[Name='Purchase 2003'].M_PriceList_Version_ID|
+|*Save*   |           |
+
+!|Create Record Auto|
+|*Table* |PM_ContractPurchase|
+|PM_Contract_id |@PM_Contract.PM_Contract_id@ |
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 2'].WM_Gate_ID|
+|*Save* | |
+
+!|Create Record Auto|
+|*Table* |PM_ContractDelivery|
+|PM_ContractPurchase_id |@PM_ContractPurchase.PM_ContractPurchase_id@ |
+|M_Product_ID|127|
+|qtyordered |4|
+|*Save* | |
+
+!|Create Record Auto|
+|*Table* |PM_ContractDelivery|
+|PM_ContractPurchase_id |@PM_ContractPurchase.PM_ContractPurchase_id@ |
+|M_Product_ID|128|
+|qtyordered |6|
+|*Save* | |
+
+!|Run Process                               |
+|*ProcessValue*|PM_DeliveryGenerate         |
+|*RecordID*    |@PM_Contract.PM_Contract_ID@|
+|*Run*         |                            |
+
+!|Read Record|
+|*Table*            |WM_DeliverySchedule|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 2'].WM_Gate_ID|
+|*Read*||
+|WM_DeliverySchedule_ID||
+
+!|Read Record|
+|*Table*            |WM_DeliveryScheduleLine|
+|WM_DeliverySchedule_ID|@WM_DeliverySchedule.WM_DeliverySchedule_ID@|
+|qtyordered |4|
+|*Read*||
+|WM_DeliveryScheduleLine_ID||
+|C_OrderLine_ID|| 
+|M_Product_ID||
+
+!|Read Record|
+|*Table*            |C_OrderLine|
+|C_OrderLine_ID|@WM_DeliveryScheduleLine.C_OrderLine_ID@| 
+|*Read*|| 
+|C_Order_ID||
+|M_Product_ID||
+
+!|Read Record|
+|*Table*            |WM_DeliveryScheduleLine|
+|WM_DeliverySchedule_ID|@WM_DeliverySchedule.WM_DeliverySchedule_ID@|
+|qtyordered |6|
+|*Read*||
+|WM_DeliveryScheduleLine_ID||
+|C_OrderLine_ID||
+|M_Product_ID||
+
+!|Read Record|
+|*Table*            |C_OrderLine|
+|C_OrderLine_ID|@WM_DeliveryScheduleLine.C_OrderLine_ID@| 
+|*Read*|| 
+|C_Order_ID||
+|M_Product_ID||
+
+!|UpdateRecord|
+|*Table*            |WM_DeliveryScheduleLine|
+|*Where*||
+|QtyOrdered|4|
+|*Update*||
+|QtyDelivered|3|
+
+!|Read Record|
+|*Table*            |WM_DeliveryScheduleLine|
+|qtyordered |4|
+|*Read*||
+|WM_DeliveryScheduleLine_ID||
+|C_OrderLine_ID||
+|M_Product_ID||
+|QtyOrdered||
+|QtyDelivered||
+|IsBackOrder||
+
+!|Read Record|
+|*Table*            |WM_HandlingUnit|
+|WM_HandlingUnit_ID|@Ref=WM_HandlingUnit[Name='HU01'].WM_HandlingUnit_ID|
+|*Read*||
+|WM_HandlingUnit_ID||
+
+!|Set DocAction|
+|*Table*|WM_DeliverySchedule|
+|WM_DeliverySchedule_ID|@WM_DeliverySchedule.WM_DeliverySchedule_ID@|
+|docAction   |CO       |
+|*Save*  |         |
+
+!|ReadInfoWindow|
+|*InfoWindow*|Delivery Schedule to Putaway/Picking|
+|*WHERE*|b.IsSOTrx='N'|
+
+!|RunProcess|
+|*ProcessValue*|CreatePutawayList|
+|WM_HandlingUnit_ID|@WM_HandlingUnit.WM_HandlingUnit_ID@|
+|IsSameLine|Y|
+|IsSameDistribution|N|
+|*Run*|| 
+
+!|Read Record|
+|*Table*            |WM_InOut|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 2'].WM_Gate_ID|
+|*Read*||
+|WM_InOut_ID||
+
+!|Set DocAction|
+|*Table*|WM_InOut|
+|WM_InOut_ID|@WM_InOut.WM_InOut_ID@|
+|docAction   |CO       |
+|*Save*  |  |
+
+!|Read Record|
+|*Table*            |WM_InOutLine|
+|WM_InOut_ID|@WM_InOut.WM_InOut_ID@|
+|QtyPicked|3|
+|*Read*||
+|M_InOutLine_ID||
+
+!|Read Record|
+|*Table*            |M_InOutLine|
+|M_InOutLine_ID|@WM_InOutLine.M_InOutLine_ID@|
+|*Read*||
+|M_InOut_ID||
+
+!|Set DocAction|
+|*Table*|M_InOut|
+|M_InOut_ID|@M_InOutLine.M_InOut_ID@|
+|docAction   |CO       |
+|*Save*  |  |
+
+!|ReadInfoWindow|
+|*InfoWindow*|Contract BackOrder Info-Window|
+|*WHERE*|a.IsActive='Y'|
+
+!|RunProcess|
+|*ProcessValue*|CreateDeliverySchedule|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 3'].WM_Gate_ID|
+|*Run*||
+
+!|Read Record|
+|*Table*            |WM_DeliverySchedule|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 3'].WM_Gate_ID|
+|*Read*||
+|WM_DeliverySchedule_ID||
+
+!|Read Record|
+|*Table*            |WM_DeliveryScheduleLine|
+|WM_DeliverySchedule_ID|@WM_DeliverySchedule.WM_DeliverySchedule_ID@|
+|*Read*||
+|QtyOrdered ||
+|QtyDelivered ||
+|C_OrderLine_ID||
+|M_Product_ID||
+
+!|Read Record|
+|*Table*            |WM_DeliveryScheduleLine|
+|qtyordered |4|
+|*Read*||
+|WM_DeliveryScheduleLine_ID||
+|C_OrderLine_ID||
+|M_Product_ID||
+|QtyOrdered||
+|QtyDelivered||
+|IsBackOrder||

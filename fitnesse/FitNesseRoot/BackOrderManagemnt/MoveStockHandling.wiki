@@ -1,0 +1,101 @@
+---
+Help: Reference Only - Not Usable
+---
+!|Login|
+|User        |GardenAdmin|
+|Password    |GardenAdmin|
+|AD_ClIEnT_id|@Ref=AD_Client[Value='GardenWorld'].AD_Client_ID|
+|AD_Role_id  |@Ref=AD_Role[Name='GardenWorld Admin'].AD_Role_ID        |
+|AD_Org_ID|@Ref=AD_Org[Name='HQ'].AD_Org_ID        |
+|M_Warehouse_id  |@Ref=M_Warehouse[Name='HQ Warehouse'].M_Warehouse_ID        |
+|*Login*     |           |
+
+!|Read Record|
+|*Table*            |WM_Gate|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 1'].WM_Gate_ID|
+|*Read*||
+
+!|ReadInfoWindow|
+|*InfoWindow*|Orders to Delivery Schedule|
+|*WHERE*|b.IsSOTrx='N'|
+
+!|RunProcess|
+|*ProcessValue*|CreateDeliverySchedule|
+|WM_Gate_ID|@WM_Gate.WM_Gate_ID@|
+|*Run*||
+
+!|Read Record|
+|*Table*            |WM_DeliverySchedule|
+|WM_Gate_ID|@Ref=WM_Gate[Name='Gate 1'].WM_Gate_ID|
+|*Read*||
+|WM_DeliverySchedule_ID||
+
+!|Set DocAction|
+|*Table*|WM_DeliverySchedule|
+|WM_DeliverySchedule_ID|@WM_DeliverySchedule.WM_DeliverySchedule_ID@|
+|docAction   |CO       |
+|*Save*  |         |
+
+!|Read Record|
+|*Table*            |WM_HandlingUnit|
+|WM_HandlingUnit_ID|@Ref=WM_HandlingUnit[Name='HU01'].WM_HandlingUnit_ID|
+|*Read*||
+|WM_HandlingUnit_ID||
+
+!|ReadInfoWindow|
+|*InfoWindow*|Delivery Schedule to Putaway/Picking|
+|*WHERE*|b.IsSOTrx='N'|
+
+!|RunProcess|
+|*ProcessValue*|CreatePutawayList|
+|WM_HandlingUnit_ID|@WM_HandlingUnit.WM_HandlingUnit_ID@|
+|IsSameLine|Y|
+|*Run*|| 
+
+!|Read Record|
+|*Table*            |M_Locator|
+|M_Locator_ID|@Ref=M_Locator[Value='Furniture-1-B-2'].M_Locator_ID|
+|*Read*||
+|M_Locator_ID||
+
+!|ReadInfoWindow|
+|*InfoWindow*|Putaway/Picking Info-Window|
+|*WHERE*|b.IsSOTrx='N' AND a.QtyPicked=8|
+
+!|RunProcess|
+|*ProcessValue*|ChangeLocator|
+|M_Locator_ID|@M_Locator.M_Locator_ID@|
+|*Run*|| 
+
+!|Read Record|
+|*Table*            |WM_InOutLine|
+|M_Locator_ID|@M_Locator.M_Locator_ID@|
+|*Read*||
+|WM_InOutLine_ID||
+
+!|Read Record|
+|*Table*            |WM_EmptyStorageLine|
+|WM_InOutLine_ID|@WM_InOutLine.WM_InOutLine_ID@|
+|*Read*||
+|DateStart||
+|DateEnd||
+|WM_HandlingUnit_ID||
+|M_Product_ID||
+|QtyMovement||
+
+!|Read Record|
+|*Table*            |WM_HandlingUnit|
+|WM_HandlingUnit_ID|@WM_InOutLine.WM_HandlingUnit_ID@|
+|M_Locator_ID|@M_Locator.M_Locator_ID@|
+|*Read*||
+|WM_HandlingUnit_ID||
+
+!|Read Record|
+|*Table*            |WM_HandlingUnitHistory|
+|WM_HandlingUnit_ID|@WM_HandlingUnit.WM_HandlingUnit_ID@|
+|QtyMovement|8|
+|*Read*||
+|WM_HandlingUnit_ID||
+|DateStart||
+|DateEnd||
+|M_Product_ID||

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase</rootPath>
+  <executionLog>
+    <testSystem>fit:fitnesse.client.FitServerServletInvoker</testSystem>
+    <command>java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/bin:./fitnesse-standalone.jar:./lib/*.jar:./bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet red1 33195 3863</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>8475</totalRunTimeInMillis>
+</suiteResults>
+

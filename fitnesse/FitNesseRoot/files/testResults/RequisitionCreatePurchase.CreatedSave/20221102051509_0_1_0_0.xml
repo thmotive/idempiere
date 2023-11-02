@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase.CreatedSave</rootPath>
+  <result>
+    <counts>
+      <right>9</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-11-02T05:15:09+08:00</date>
+    <runTimeInMillis>331</runTimeInMillis>
+    <content>&lt;br/&gt;Complete the Requisition&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RequisitionCreatePurchase.LoginClient"&gt;LoginClient&lt;/a&gt; &lt;a href="RequisitionCreatePurchase.LoginClient?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Login&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;User&lt;/td&gt;
+		&lt;td&gt;SuperUser&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Password&lt;/td&gt;
+		&lt;td&gt;System123&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_ClIEnT_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;AD_Role_id&lt;/td&gt;
+		&lt;td&gt;1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;*Login*&lt;/td&gt;
+		&lt;td class="pass"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;M_Requisition&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Requisition_id&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000331&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Save*&lt;/td&gt;
+		&lt;td class="pass"&gt;DocStatus=CO expected CO - IP - WP - WC&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Run Process&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*ProcessValue*&lt;/td&gt;
+		&lt;td&gt;M_Requisition_POCreate&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RecordID*&lt;/td&gt;
+		&lt;td&gt;@M_Requisition.M_Requisition_id@&lt;hr/&gt;1000331&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*DocAction*&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ConsolidateDocument&lt;/td&gt;
+		&lt;td&gt;N&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="pass"&gt;*Run*&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_BPartner_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=C_BPartner[Value='0022'].C_BPartner_ID&lt;hr/&gt;1000302&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;IsSOTrx&lt;/td&gt;
+		&lt;td&gt;'N'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Description&lt;/td&gt;
+		&lt;td&gt;'Requisition: @M_Requisition.DocumentNo@'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrder[1000368-800242,IsSOTrx=false,C_DocType_ID=0, GrandTotal=3210.00]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;1000368&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocumentNo&lt;/td&gt;
+		&lt;td&gt;800242&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000368&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="fail"&gt;More than one record found: SELECT * FROM C_OrderLine WHERE C_Order_ID=1000368 AND AD_Client_ID=1000000&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;QtyOrdered&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Set DocAction&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_Order&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000368&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DocAction&lt;/td&gt;
+		&lt;td&gt;CO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="pass"&gt;*Save*DocStatus=CO expected CO - IP - WP - WC&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000368&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;QtyOrdered&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrderLine[1000401, Line=20, Ordered=2.00, Delivered=0.0, Invoiced=0.0, Reserved=2.00, LineNet=2000.00]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Read Record&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Table*&lt;/td&gt;
+		&lt;td&gt;C_OrderLine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;C_Order_ID&lt;/td&gt;
+		&lt;td&gt;@C_Order.C_Order_ID@&lt;hr/&gt;1000368&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;QtyOrdered&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;@Ref=M_Product[Value='Equipment (by LAK)'].M_Product_ID&lt;hr/&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*Read*&lt;/td&gt;
+		&lt;td class="pass"&gt;MOrderLine[1000400, Line=10, Ordered=1.00, Delivered=0.0, Invoiced=0.0, Reserved=1.00, LineNet=1000.00]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;M_Product_ID&lt;/td&gt;
+		&lt;td&gt;1000004&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;Roll Back&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*RollBack*&lt;/td&gt;
+		&lt;td class="pass"&gt;TRUE&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>CreatedSave</relativePageName>
+  </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>331</totalRunTimeInMillis>
+</testResults>
+

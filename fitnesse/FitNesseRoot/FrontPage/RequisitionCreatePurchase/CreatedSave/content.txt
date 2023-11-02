@@ -1,0 +1,7 @@
+Complete the Requisition
+
+!|Set DocAction|
+|*Table* |M_Requisition               |
+|M_Requisition_id|@M_Requisition.M_Requisition_id@|
+|DocAction   |CO                      |
+|*Save*  |         |

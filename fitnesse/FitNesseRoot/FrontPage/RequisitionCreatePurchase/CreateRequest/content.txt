@@ -1,0 +1,24 @@
+!include -c LoginClient
+
+ 
+Create Requisition 
+
+!|Create Record|
+|*Table*               |M_Requisition                                      |
+|ad_org_id             |1000000                                          |
+|ad_user_id             |1000697                                          |
+|M_Warehouse_id             |1000000                                          |
+|C_DocType_ID           |1000018                |
+|Description           |Test And so on|
+|*Save*                |                                             |
+
+Create Requisition line
+
+!|Create Record|
+|*Table*     |M_RequisitionLine                                |
+|M_Requisition_id  |@M_Requisition.M_Requisition_id@                       |
+|AD_Org_ID   |@M_Requisition.AD_Org_ID@                        |
+|C_BPartner_id         |@Ref=C_BPartner[Value='Arunee'].C_BPartner_ID|
+|M_Product_id|@Ref=M_Product[Value='Hardware (by LAK)'].M_Product_ID|
+|Qty  |2                                          |
+|*Save*      |                                           |

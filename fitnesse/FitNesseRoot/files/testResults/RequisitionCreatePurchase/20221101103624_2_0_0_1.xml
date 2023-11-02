@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20200501</FitNesseVersion>
+  <rootPath>RequisitionCreatePurchase</rootPath>
+  <pageHistoryReference>
+    <name>RequisitionCreatePurchase.CreateRequest</name>
+    <date>2022-11-01T10:36:24+08:00</date>
+    <pageHistoryLink>RequisitionCreatePurchase.CreateRequest?pageHistory&amp;resultDate=20221101103624</pageHistoryLink>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>52</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RequisitionCreatePurchase.CreatedSave</name>
+    <date>2022-11-01T10:36:24+08:00</date>
+    <pageHistoryLink>RequisitionCreatePurchase.CreatedSave?pageHistory&amp;resultDate=20221101103624</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <runTimeInMillis>236</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RequisitionCreatePurchase.LoginClient</name>
+    <date>2022-11-01T10:36:24+08:00</date>
+    <pageHistoryLink>RequisitionCreatePurchase.LoginClient?pageHistory&amp;resultDate=20221101103624</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>1</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>fit:fitnesse.client.FitServerServletInvoker</testSystem>
+    <command>java -Xms32m -Xmx512m -DLOG4J_LEVEL=CONFIG -cp /home/red1/projects/idempiere-dev-setup/idempiere/fitnesse/bin:./fitnesse-standalone.jar:./lib/*.jar:./bin fitnesse.client.FitServerServletInvoker http://localhost:8080/fitnesse/FitServlet red1 44441 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>9 right, 0 wrong, 0 ignored, 1 exceptions
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>2</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>718</totalRunTimeInMillis>
+</suiteResults>
+
